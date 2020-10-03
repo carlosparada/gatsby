@@ -14,6 +14,18 @@ function AvumLink() {
   );
 }
 
+function PengeleLink() { 
+  return (
+    <a
+      href="http://www.pengele.com"
+      target="_blank"
+      rel="noreferrer noopener"
+    >
+      Pengele
+    </a>
+  );
+}
+
 function Index() {
   const [date, setDate] = useState(null);
   useEffect(() => {
@@ -34,10 +46,10 @@ function Index() {
       A Joint Venture between Avum and Pengele
       </h2>
       <p>
-        UCert.com is a Joint Venture company between Avum and Pengele. Both
+        UCert.com is a Joint Venture company between <AvumLink /> and <PengeleLink />. Both
         companies have joined forces to take advantage of Avum's resources
-        and Pengele's expertise in creating secure business intelligence
-        solutions.
+        and Pengele's expertise in creating secure solutions that integrate
+        data backends, web frontends, and business intelligence analysis solutions.
       </p>
       <h2>Website Technology</h2>
       <p>
