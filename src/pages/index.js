@@ -2,6 +2,18 @@ import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import '../styles/index.css';
 
+function AvumLink() { 
+  return (
+    <a
+      href="http://www.avum.com"
+      target="_blank"
+      rel="noreferrer noopener"
+    >
+      Avum
+    </a>
+  );
+}
+
 function Index() {
   const [date, setDate] = useState(null);
   useEffect(() => {
@@ -15,10 +27,24 @@ function Index() {
   return (
     <main>
       <Helmet>
-        <title>Gatsby + Node.js (TypeScript) API</title>
+        <title>UCert.com</title>
       </Helmet>
-      <h1>Gatsby + Node.js (TypeScript) API</h1>
+      <h1>UCert</h1>
       <h2>
+      A Joint Venture between Avum and Pengele
+      </h2>
+      <p>
+        UCert.com is a Joint Venture company between Avum and Pengele. Both
+        companies have joined forces to take advantage of Avum's resources
+        and Pengele's expertise in creating secure business intelligence
+        solutions.
+      </p>
+      <h2>Website Technology</h2>
+      <p>
+        This website was created using Gatsby + Node.js (TypeScript) API. The
+        current date is {date ? date : 'Loading date...'}
+      </p>
+      <p>
         Deployed with{' '}
         <a
           href="https://vercel.com/docs"
@@ -27,28 +53,7 @@ function Index() {
         >
           Vercel
         </a>
-        !
-      </h2>
-      <p>
-        <a
-          href="https://github.com/vercel/vercel/blob/master/gatsby"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
-          This project
-        </a>{' '}
-        is a <a href="https://www.gatsbyjs.org/">Gatsby</a> app with two
-        directories, <code>/src</code> for static content and <code>/api</code>{' '}
-        which contains a serverless{' '}
-        <a href="https://nodejs.org/en/">Node.js (TypeScript)</a> function. See{' '}
-        <a href="/api/date">
-          <code>api/date</code> for the Date API with Node.js (TypeScript)
-        </a>
-        .
       </p>
-      <br />
-      <h2>The date according to Node.js (TypeScript) is:</h2>
-      <p>{date ? date : 'Loading date...'}</p>
     </main>
   );
 }
